@@ -30,6 +30,10 @@ Math-heavy day = `120M/90C/30L`.
 * `attention.py` forward + `test_attention.py` green.
 * A short note (md) on attention shapes and masking.
 
+**Videos To Watch**
+* [Build an LLM from Scratch #3 — Coding Attention Mechanisms (Sebastian Raschka)](https://www.youtube.com/watch?v=Xpr8D6LeAtw)
+
+
 ---
 
 ## Day 2 — Speedups 101 with `torch.compile`
@@ -53,10 +57,14 @@ Math-heavy day = `120M/90C/30L`.
 * `train.py` (baseline+compiled), benchmark CSV/MD with tokens/s & memory.
 * One-paragraph summary: when `torch.compile` helped/hurt. ([docs.pytorch.org][2])
 
+**Videos To Watch**
+* [torch.compile: The Missing Manual (Edward Yang, PyTorch @ Meta)](https://www.youtube.com/watch?v=rew5CSUaIXg)
+* *(Optional)* [Intro to torch.compile & vLLM — Office Hours](https://www.youtube.com/watch?v=5zFPxCcb7hM)
+
 ---
 
-## Day 3 — SDPA vs FlashAttention-2 (inference/train microbench)
-
+## Day 3 —  (inference/train microbench)
+SDPA vs FlashAttention-2
 **Read (90R)**
 
 * PyTorch **SDPA** docs (how backend dispatch works, enable/disable helpers). ([docs.pytorch.org][3])
@@ -80,6 +88,11 @@ Math-heavy day = `120M/90C/30L`.
 
 * Bench script + plot + markdown table (mean±std over 3 runs).
 * Note SDPA backend chosen per config. ([docs.pytorch.org][3])
+
+**Videos To Watch**
+* [FlashAttention — Tri Dao (Stanford MLSys)](https://www.youtube.com/watch?v=_3ql6yE_t2k)
+* [FlashAttention-2: Making Transformers 800% faster (Latent Space)](https://www.youtube.com/watch?v=bdR6q0a4T0o)
+* [Scaled Dot-Product Attention — PyTorch Tutorial](https://www.youtube.com/watch?v=QqsgQnpTJhE)
 
 ---
 
@@ -112,6 +125,9 @@ Math-heavy day = `120M/90C/30L`.
 
 * Mock paged-KV adaptor and a **KV memory note** (with example numbers). ([arXiv][6])
 
+**Blog to Read**
+* [PagedAttention and vLLM Explained: What Are They?](https://hackernoon.com/pagedattention-and-vllm-explained-what-are-they)
+
 ---
 
 ## Day 5 — Numerics sanity: matrix calculus + grad checks
@@ -135,6 +151,12 @@ Math-heavy day = `120M/90C/30L`.
 
 * Grad-check tests + plot + short “what failed first” notes. ([MIT OpenCourseWare][8], [arXiv][9])
 
+**Videos To Watch**
+* [MIT 18.S096 Matrix Calculus — Lecture 1](https://www.youtube.com/watch?v=Jm0J7VGz7g8)
+* [MIT 18.S096 Matrix Calculus — Lecture 2](https://www.youtube.com/watch?v=1eJcMZzQq0o)
+* [Implementing GELU and Its Derivative from Scratch](https://www.youtube.com/watch?v=hFoA1ujpB1E)
+
+
 ---
 
 ## Day 6 — MHA cleanup: LayerNorm & determinism
@@ -157,6 +179,10 @@ Math-heavy day = `120M/90C/30L`.
 **Deliverables**
 
 * Cleaned modules + **deterministic training script** + table of run-to-run std-dev. ([docs.pytorch.org][11])
+
+**Videos To Watch**
+* [PyTorch Quick Tip: Reproducible Results & Deterministic Training](https://www.youtube.com/watch?v=0yb8oLUU9Jg)
+* *(Optional)* [Lightning: Deterministic Flag Walkthrough](https://www.youtube.com/watch?v=V8BOoDg12yY)
 
 ---
 
@@ -182,6 +208,10 @@ Math-heavy day = `120M/90C/30L`.
 
 * Baseline checkpoint + loss plot + config used.
 
+**Videos To Watch**
+* [Build an LLM from Scratch 4: Implementing a GPT model from Scratch To Generate Text](https://www.youtube.com/watch?v=YSAkgEarBGE)
+* [Training with PyTorch — Official Tutorial](https://www.youtube.com/watch?v=EMXfZB8FVUA)
+
 ---
 
 ## Day 8 — Fused ops pass (understand, try, compare)
@@ -203,6 +233,10 @@ Math-heavy day = `120M/90C/30L`.
 **Deliverables**
 
 * Benchmark table + short “when to fuse” notes. ([NVIDIA Docs][13])
+
+**Videos To Watch**
+* [What’s New in Transformer Engine & FP8 Training (NVIDIA GTC)](https://www.youtube.com/watch?v=UTfXcZtV6ws)
+* *(Optional)* [3× Faster Mixtral with Fused Modules](https://www.youtube.com/watch?v=5aYxwNoaRno)
 
 ---
 
@@ -227,6 +261,10 @@ Math-heavy day = `120M/90C/30L`.
 **Deliverables**
 
 * Positional module + ablation markdown snippet with your observations. ([arXiv][15])
+
+**Videos To Watch**
+* [Rotary Positional Encodings Explained Visually (Vizuara)](https://www.youtube.com/watch?v=WPqxpTlRj-8)
+* [MPT: Extrapolate Context with ALiBi (Mosaic)](https://www.youtube.com/watch?v=dRCmJf1aZJ4)
 
 ---
 

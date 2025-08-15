@@ -231,3 +231,36 @@
 | 100 | Present           | N/A                          | Final run + presentation                 | Takeaways              | Audience feedback notes | Final release \& talk  | 90R/120C/30L |
 
 ---
+
+
+# Biggest gaps (and how to patch them fast)
+
+1. Data governance & dedup
+Add a tiny “data pipeline sanity” pass: licensing, dedup (MinHash/LSH), language/domain mix, length filters. Prevents garbage-in scaling artifacts.
+
+2. Speculative decoding & distillation
+You cover serving + attention efficiency; add speculative decoding (draft model or tree-based) and a small KD experiment—huge, practical speedups.
+
+3. Quantization breadth
+You have QLoRA; add inference quant comparison (AWQ vs GPTQ vs SmoothQuant) at the serving sprint.
+
+4. Long-context training tricks
+You benchmark long context; also try position interpolation / YaRN and RoPE scaling to maintain quality at 8–32k.
+
+5. MoE snapshot
+One day to prototype a small sparse MoE (top-k router) for throughput/memory comparisons.
+
+6. Preference optimization variants
+Alongside DPO/PPO-lite, add one light baseline: ORPO / IPO / KTO (RL-free, simple to run). Gives breadth without heavy infra.
+
+7. Evaluation realism
+Add long-context eval (LongBench/L-Eval style), spec-dec impact on quality/latency, and a tiny safety red-team set earlier (not only Day 88).
+
+8. Repro & CI
+Lock seeds, versions, and flags; add pre-commit (ruff/black), pytest, Hydra configs, and a single make repro entry point.
+
+9. Compute accounting
+Make tokens-budget → $ cost → wall-clock a first-class artifact; track energy (optional) for the cost table.
+
+10. Risk buffers
+Add micro “catch-up/refactor” days to avoid compounding debt.
