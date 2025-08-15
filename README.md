@@ -51,7 +51,9 @@
 ---
 
 ## Sprint 1 (Days 1–10) — Transformer Systems \& Tooling Refresher
-**S1 — Transformer systems & tooling refresher** Build a tiny GPT, add torch.compile, write unit tests for attention/LN, and benchmark **FlashAttention‑2** vs PyTorch SDPA; learn why KV‑cache dominates inference and how **PagedAttention** changes serving. Outcome: benchmarks + notes. ([PyTorch Documentation][8], [arXiv][2])
+* **S1 — Transformer systems & tooling refresher** Build a tiny GPT, add torch.compile, write unit tests for attention/LN, and benchmark 
+* **FlashAttention‑2** vs PyTorch SDPA; 
+* learn why KV‑cache dominates inference and how **PagedAttention** changes serving. Outcome: benchmarks + notes.
 
 | Day | Focus                 | Paper/Video                           | Coding/Experiment                            | Math/Notes                           | Eval/Logging                 | Deliverable                      | Time         |
 | -- | --------------------- | ------------------------------------- | -------------------------------------------- | ------------------------------------ | ---------------------------- | -------------------------------- | ------------ |

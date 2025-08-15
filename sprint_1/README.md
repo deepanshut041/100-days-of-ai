@@ -1,7 +1,3 @@
-Gotcha — here’s a **full day-by-day Sprint 1 plan** *with* coding + math + eval/logging + deliverables, and the exact links you’ll need. It sticks **only** to Sprint 1.
-
----
-
 # Sprint 1 — Transformer Systems & Tooling (Days 1–10)
 
 **Daily time budget:** `90R/120C/30L` (R=read/watch, C=code/experiments, L=log/eval).
